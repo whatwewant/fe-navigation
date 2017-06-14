@@ -3,7 +3,7 @@
 * @Date:   2017-06-14T22:54:06+08:00
 * @Email:  uniquecolesmith@gmail.com
 * @Last modified by:   eason
-* @Last modified time: 2017-06-14T23:22:11+08:00
+* @Last modified time: 2017-06-14T23:45:48+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -22,6 +22,12 @@ export default {
     list: {},
   },
   reducers: {
+    'save/navs'({ navs, ...others }, { payload: newNavs }) { // eslint-disable-line
+      return {
+        ...others,
+        navs: { ...navs, ...newNavs },
+      };
+    },
     'save/nav/content'({ list, ...others }, { nav, payload: navContent }) { // eslint-disable-line
       return {
         ...others,
@@ -31,11 +37,20 @@ export default {
     },
   },
   effects: {
+    *'sync/navs'(action, { call, put }) { // eslint-disable-line
+      const navs = yield call(services.fetchNavigations, 'navigations');
+
+      if (!navs) {
+        throw new Error('navs is null');
+      }
+
+      yield put({ type: 'save/navs', payload: navs });
+    },
     *'fire/nav'({ payload: nav }, { call, put }) { // eslint-disable-line
       const { key } = nav;
       const navContent = yield call(services.fetchNavigations, key);
 
-      if (!nav) {
+      if (!navContent) {
         throw new Error('nav is null');
       }
 
@@ -44,6 +59,7 @@ export default {
   },
   subscriptions: {
     setup({ dispatch }) {
+      dispatch({ type: 'sync/navs' });
       dispatch({ type: 'fire/nav', payload: { name: '社区', key: 'community', value: 'community' } });
     },
   },
