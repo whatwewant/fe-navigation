@@ -1,0 +1,37 @@
+/**
+* @Author: eason
+* @Date:   2017-06-14T22:09:24+08:00
+* @Email:  uniquecolesmith@gmail.com
+* @Last modified by:   eason
+* @Last modified time: 2017-06-14T22:42:29+08:00
+* @License: MIT
+* @Copyright: Eason(uniquecolesmith@gmail.com)
+*/
+
+.card {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  transition: box-shadow .25s ease, transform .25s ease;
+
+  &:hover {
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+  }
+
+  .header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 15px;
+
+    .avatar {
+      margin-right: 10px
+    }
+  }
+
+  .body {
+    padding: 15px 0;
+  }
+}

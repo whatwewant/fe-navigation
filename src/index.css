@@ -1,0 +1,19 @@
+/**
+* @Author: eason
+* @Date:   2017-01-05T06:16:19+08:00
+* @Email:  uniquecolesmith@gmail.com
+* @Last modified by:   eason
+* @Last modified time: 2017-06-14T22:21:01+08:00
+* @License: MIT
+* @Copyright: Eason(uniquecolesmith@gmail.com)
+*/
+
+html, body, :global(#root) {
+  height: 100%;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
