@@ -2,8 +2,8 @@
 * @Author: eason
 * @Date:   2016-12-15T13:48:42+08:00
 * @Email:  uniquecolesmith@gmail.com
-* @Last modified by:   eason
-* @Last modified time: 2017-06-14T23:45:09+08:00
+ * @Last modified by:   eason
+ * @Last modified time: 2017-06-15T00:30:31+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -11,7 +11,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { View, Flex } from 'elfen';
-import styles from './IndexPage.css';
+import styles from './App.css';
 
 import Navigation from '../components/Navigation';
 import NavigationContent from '../components/NavigationContent';

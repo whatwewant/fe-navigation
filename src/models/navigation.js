@@ -2,8 +2,8 @@
 * @Author: eason
 * @Date:   2017-06-14T22:54:06+08:00
 * @Email:  uniquecolesmith@gmail.com
-* @Last modified by:   eason
-* @Last modified time: 2017-06-14T23:45:48+08:00
+ * @Last modified by:   eason
+ * @Last modified time: 2017-06-15T00:29:11+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -50,11 +50,11 @@ export default {
       const { key } = nav;
       const navContent = yield call(services.fetchNavigations, key);
 
-      if (!navContent) {
-        throw new Error('nav is null');
-      }
+      // if (!navContent) {
+      //   throw new Error('navs is null');
+      // }
 
-      yield put({ type: 'save/nav/content', nav, payload: { [key]: navContent } });
+      yield put({ type: 'save/nav/content', nav, payload: { [key]: navContent || {} } });
     },
   },
   subscriptions: {
