@@ -3,7 +3,7 @@
 * @Date:   2016-12-15T13:48:42+08:00
 * @Email:  uniquecolesmith@gmail.com
  * @Last modified by:   eason
- * @Last modified time: 2017-06-15T01:01:59+08:00
+ * @Last modified time: 2017-06-15T01:04:45+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -35,9 +35,9 @@ IndexPage.propTypes = {
 const mapState = ({ navigation }) => {
   const { currentNav, navs, list } = navigation;
   return {
-    navs: Object.values(navs || {}).sort((a, b) => b.index < a.x),
+    navs: Object.values(navs || {}).sort((a, b) => b.index < a.index),
     name: currentNav.name,
-    list: Object.values(list[currentNav.key] || {}).sort((a, b) => b.index < a.x),
+    list: Object.values(list[currentNav.key] || {}).sort((a, b) => b.index < a.index),
   };
 };
 
