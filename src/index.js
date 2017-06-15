@@ -3,7 +3,7 @@
 * @Date:   2017-01-04T17:00:03+08:00
 * @Email:  uniquecolesmith@gmail.com
  * @Last modified by:   eason
- * @Last modified time: 2017-06-16T01:09:16+08:00
+ * @Last modified time: 2017-06-16T01:10:30+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -25,9 +25,6 @@ const initialState = store.get(name) || {};
 const app = dva({
   initialState: { // @TODO for compatible, will remove in next version
     ...initialState,
-    player: {
-      ...initialState.player, tracks: initialState.player ? initialState.player.tracks || [] : [],
-    },
   },
   onStateChange() {
     store.set(name, pick(app._store.getState(), ['navigation'])); // eslint-disable-line
