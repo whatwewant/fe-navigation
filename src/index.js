@@ -3,13 +3,14 @@
 * @Date:   2017-01-04T17:00:03+08:00
 * @Email:  uniquecolesmith@gmail.com
  * @Last modified by:   eason
- * @Last modified time: 2017-06-16T01:05:48+08:00
+ * @Last modified time: 2017-06-16T01:09:16+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
 
 import dva from 'dva';
 import store from 'store';
+import pick from 'lodash.pick';
 import OfflinePluginRuntime from 'offline-plugin/runtime';
 import './index.css';
 
