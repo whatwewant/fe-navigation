@@ -3,7 +3,7 @@
 * @Date:   2017-01-05T06:16:19+08:00
 * @Email:  uniquecolesmith@gmail.com
 * @Last modified by:   eason
-* @Last modified time: 2017-06-14T22:21:01+08:00
+* @Last modified time: 2017-06-15T09:49:29+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -14,6 +14,28 @@ html, body, :global(#root) {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  
+
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* 自定义滚动条: http://www.xuanfengge.com/css3-webkit-scrollbar.html */
+/*   http://guide.500lines.cc/  */
+
+/* 滚动槽宽 */
+::-webkit-scrollbar {
+  width: 8px; /* vertical bar */
+  height: 8px; /* horizontal bar */
+}
+
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /*box-shadow: inset 0 0 10px rgba(0, 0, 0, .2);*/
 }
