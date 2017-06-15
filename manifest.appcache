@@ -1,11 +1,11 @@
 CACHE MANIFEST
-#ver:2017-6-16 01:13:13
+#ver:2017-6-16 01:16:28
 #plugin:4.8.1
 
 CACHE:
-/index.js
-/index.css
-/
+./index.js
+./index.css
+./
 
 NETWORK:
 *
