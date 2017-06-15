@@ -3,7 +3,7 @@
 * @Date:   2016-12-15T13:48:42+08:00
 * @Email:  uniquecolesmith@gmail.com
 * @Last modified by:   eason
-* @Last modified time: 2017-06-15T13:49:51+08:00
+* @Last modified time: 2017-06-15T13:52:10+08:00
 * @License: MIT
 * @Copyright: Eason(uniquecolesmith@gmail.com)
 */
@@ -23,9 +23,7 @@ function IndexPage(props) {
   return (
     <Flex width="100%" height="100%" className={styles.normal}>
       <Helmet>
-        <title>DASHBOARD ADMIN</title>
         <link rel="shortcut icon" href={logo} />
-        <script src="//at.alicdn.com/t/font_c4y7asse3q1cq5mi.js" />
       </Helmet>
       <View width={280} style={{ boxShadow: '0 5px 15px rgba(0,0,0,.08)' }}>
         <Navigation navigations={props.navs} onSelectNav={props.onSelectNav} />
