@@ -33,7 +33,7 @@ export default function Navigation(props) {
         {name}
       </Text>
       <Absolute top={107} right={0} bottom={0} left={0}>
-        <List className={styles.scroll} width="100%" height="100%" style={{ padding: 30, display: 'flex', flexWrap: 'wrap' }}>
+        <List className={styles.scroll} width="100%" height="100%" style={{ padding: 30, display: 'flex', flexWrap: 'wrap', alignContent: 'start' }}>
           {list.map((item, key) => (
             <ListItem key={key}>
               <Card
